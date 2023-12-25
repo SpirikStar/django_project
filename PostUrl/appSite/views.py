@@ -12,6 +12,6 @@ class PageHome(View):
             request.session['hist'] = 'ok'
             return HttpResponse("Сессии нету")
 
-        # return render(request, self.template_home)
+        # return render(requesft, self.template_home)
     def post(self, request):
         return HttpResponse(request.POST['number'])
