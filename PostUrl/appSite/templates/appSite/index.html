@@ -6,11 +6,22 @@
     <title>Форма</title>
 </head>
 <body>
+    <h1>Создание</h1>
     <form action="{% url 'urlPageHome' %}" method="post">
         {% csrf_token %}
-        <input type="text" name="email" required>
-        <input type="number" name="number">
+        <input type="text" name="method" value="create" hidden>
+        <input type="text" name="last_name" placeholder="Имя" required>
+        <input type="email" name="email" placeholder="Почта" required>
+        <input type="number" name="age" placeholder="Возраст" required>
         <button>Отправить</button>
+    </form>
+    <h1>Изменить имя зная почту</h1>
+    <form action="{% url 'urlPageHome' %}" method="post">
+        {% csrf_token %}
+        <input type="text" name="method" value="update" hidden>
+        <input type="email" name="email" placeholder="Найти почту" required>
+        <input type="text" name="last_name" placeholder="Изменить имя" required>
+        <button>Обновить</button>
     </form>
 </body>
 </html>
