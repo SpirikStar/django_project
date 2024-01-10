@@ -3,4 +3,5 @@ from . import views
 
 urlpatterns = [
     re_path(r'home/?$', views.HomePage.as_view(), name="url-home"),
+    re_path(r'news/?$', views.NewsPage.as_view(), name="url-news"),
 ]

@@ -4,4 +4,7 @@ from django.views import View
 
 class HomePage(View):
     def get(self, request):
-        return render(request, 'appPages/index.html')
+        return render(request, 'appPages/home/index.html')
+class NewsPage(View):
+    def get(self, request):
+        return render(request, 'appPages/news/index.html')
