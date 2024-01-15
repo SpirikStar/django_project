@@ -135,9 +135,10 @@ table {
 
 .header {
     width: 100%;
-    background-color: #b3faff;
+    background-color: #d7d7d7;
 }
-.header__content{
+
+.header__content {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -145,19 +146,21 @@ table {
     margin: 0 auto;
     height: 5vw;
 }
+
 .header__content .logo {
     width: 4vw;
     margin-left: 4vw;
 }
-.header__content .menu a{
+
+.header__content .menu a {
     text-decoration: none;
     font-family: 'Segoe UI';
     font-size: 1vw;
     font-weight: 500;
     margin-right: 1vw;
-    color: #333;
 }
-.header__content .feedback{
+
+.header__content .feedback {
     text-decoration: none;
     font-family: 'Segoe UI';
     font-size: 1vw;
@@ -167,4 +170,53 @@ table {
     background-color: #fff;
     padding: 0.7vw 1.4vw;
     border-radius: 3vw;
+}
+
+.active {
+    color: #411bff;
+}
+
+.news {
+    width: 100vw;
+}
+
+.news__content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.news__content__card {
+    width: 300px;
+    background-color: #ad9dff;
+    margin-right: 1.389vw;
+    margin-top: 0.694vw;
+    padding: 20px 40px;
+}
+.news__content__card:last-of-type{
+    margin-right: 0;
+}
+.news__content__card h2 {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.25vw;
+}
+.news__content__card p {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.972vw;
+    margin-top: 1.389vw;
+}
+.news__content__card p {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.972vw;
+    margin-top: 1.389vw;
+}
+.news__content__card a {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.972vw;
+    margin-top: 1.389vw;
+}
+.news__content__card h6 {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.972vw;
+    margin-top: 1.389vw;
 }
