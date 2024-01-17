@@ -1,0 +1,102 @@
+body,
+html {
+    background: #EDF6FF;
+    font-family: 'Montserrat';
+
+}
+
+header {
+    width: 100%;
+    border-bottom: 1px solid #F2F2F2;
+    background: #FFF;
+}
+
+.header__content {
+    display: flex;
+    margin: 0 auto;
+    width: 100vw;
+    height: 5.556vw;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__content-logo {
+    height: 3.194vw;
+}
+
+.header__content-menu a {
+    color: #062840;
+    text-align: center;
+    font-size: 1.111vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-right: 2.083vw;
+    text-decoration: none;
+    padding: 0;
+}
+
+.header__content-menu a:last-of-type {
+    margin-right: 0;
+}
+
+.header__content-menu a.active {
+    color: #2F80ED;
+}
+
+.header__content-menu a svg {
+    width: 0.347vw;
+    height: 0.625vw;
+}
+
+.header__content-feedback svg {
+    width: 2.431vw;
+    height: 2.431vw;
+    margin-right: 0.833vw;
+    padding: 0;
+}
+
+.header__content-feedback svg:last-of-type {
+    margin-right: 0;
+}
+
+.banner {
+    background: url('../img/banner.png') no-repeat;
+    background-size: cover;
+    height: 34.722vw;
+    width: 100%;
+}
+
+.banner__content {
+    background: rgba(19, 19, 19, 0.30);
+    width: 100%;
+    height: 100%;
+}
+
+.banner__content p {
+    display: flex;
+    align-items: center;
+}
+
+.banner__content h1 {
+    color: #FFF;
+    width: 55.625vw;
+    font-size: 3.056vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding: 6.944vw 0 0 3.472vw;
+}
+
+.banner__content h1 span {
+    color: #22A0D9;
+}
+
+.banner__content h6 {
+    padding: 0.694vw 0 0 3.472vw;
+    color: #FFF;
+    font-size: 1.667vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}

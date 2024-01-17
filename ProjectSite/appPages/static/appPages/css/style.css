@@ -132,10 +132,12 @@ table {
     border-spacing: 0;
 }
 
-
+body, html {
+    background-color: #EDF6FF;
+}
 .header {
     width: 100%;
-    background-color: #d7d7d7;
+    background-color: #ffff;
 }
 
 .header__content {
