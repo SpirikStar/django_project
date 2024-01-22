@@ -3,15 +3,11 @@
     <div class="banner__content">
         <h1>Совершите <span>лучшую</span> сделку на рынке недвижимости</h1>
         <h6>Почему именно мы?</h6>
-        <p>
-            <span>Доверие</span> - больше 5 лет мы помогаем людям
-        </p>
-        <p>
-            <span>Чистая сделка</span> - мы рядом от сделки до покупки
-        </p>
-        <p>
-            <span>Работаем 24/7</span> - помочь Вам для нас важная миссия
-        </p>
+        {% for content in banner %}
+            <p>
+                <span>{{content.title}}</span> - {{content.desc}}
+            </p>
+        {% endfor %}
         <button class="banner__content-feedback">
             Оставить заявку
             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 12 10" fill="none">
