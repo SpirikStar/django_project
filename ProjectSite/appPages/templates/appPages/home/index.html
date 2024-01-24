@@ -3,4 +3,21 @@
 {% block title %}Главная страница{% endblock %}
 {% block content %}
    {% include 'appPages/banner.html' %}
+   <section class="container">
+      <h1 class="container-title">
+          ОБО
+          <span>МНЕ</span>
+      </h1>
+      <div class="aboute-me">
+          <img src="{{about_me.photo.url}}">
+          <div class="aboute-me__content">
+              <h3>{{about_me.fio}}</h3>
+              <p>{{about_me.desc}}</p>
+              <h6>{{about_me.expert}}</h6>
+          </div>
+      </div>
+  </section>
+  {% for i in documents %}
+   <a href="{{i.file.url}}" target="_blank">{{i.title}}</a>
+  {% endfor %}
 {% endblock %}

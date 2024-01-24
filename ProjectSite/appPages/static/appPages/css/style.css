@@ -7,7 +7,7 @@ html {
 
 header {
     width: 100%;
-    border-bottom: 1px solid #F2F2F2;
+    border-bottom: 0.069vw solid #F2F2F2;
     background: #FFF;
 }
 
@@ -28,6 +28,7 @@ header {
     padding: 0;
     margin: 0;
 }
+
 .header__content-menu a {
     color: #062840;
     text-align: center;
@@ -104,6 +105,7 @@ header {
     font-weight: 700;
     line-height: normal;
 }
+
 .banner__content p {
     margin-left: 4.514vw;
     margin-top: 1.528vw;
@@ -111,10 +113,12 @@ header {
     color: #fff;
     font-size: 1.111vw;
 }
-.banner__content p span{
+
+.banner__content p span {
     color: #22A0D9;
 }
-.banner__content-feedback{
+
+.banner__content-feedback {
     background-color: #22A0D9;
     padding: 0.694vw 1.042vw;
     margin-left: 4.514vw;
@@ -127,7 +131,63 @@ header {
     gap: 0.347vw;
     font-size: 1.111vw;
 }
-.banner__content-feedback svg{
+
+.banner__content-feedback svg {
     width: 0.833vw;
     height: 0.694vw;
+}
+
+.container {
+    width: 90vw;
+    margin: 4.167vw auto 0 auto;
+}
+
+.container-title {
+    color: #062840;
+    font-size: 2.222vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.container-title span {
+    color: #22A0D9;
+}
+
+.aboute-me {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 0.694vw;
+    box-shadow: 0.347vw 0.347vw 5.556vw 0vw rgba(0, 32, 51, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2.778vw;
+}
+
+.aboute-me img {
+    width: 17vw;
+}
+
+.aboute-me__content {
+    width: 55vw;
+}
+
+.aboute-me h3 {
+    font-size: 2.222vw;
+    font-weight: 600;
+}
+
+.aboute-me p {
+    width: 45vw;
+    margin-top: 1vw;
+
+    line-height: 140%;
+    font-size: 1vw;
+}
+
+.aboute-me h6 {
+    margin-top: 1vw;
+    font-size: 1.4vw;
+    font-weight: 600;
 }
