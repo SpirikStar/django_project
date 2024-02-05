@@ -1,0 +1,13 @@
+{% extends 'appKey/base.html' %}
+
+{% block title %}Карточки товаров{% endblock %}
+
+{% block content %}
+    {{product.desc|safe}}
+    <form action="{% url 'urlHomeKey' %}" method="post">
+        {% csrf_token %}
+        <input name="method" type="text" value="addCategory" hidden>
+        <input name="text" type="text" placeholder="Введите категорию: ">
+        <button>Добавить</button>
+    </form>
+{% endblock %}
