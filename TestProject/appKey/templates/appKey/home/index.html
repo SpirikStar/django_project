@@ -1,0 +1,14 @@
+{% extends 'appKey/base.html' %}
+
+{% block title %}Товары{% endblock %}
+
+{% block content %}
+    {% for category, sub_categorys in object.items %}
+        <h4>{{category}}</h4>
+        <ul>
+            {% for category_id, sub_category in sub_categorys.items %}
+                <li><a href="{% url 'urlProduct' category_id %}">{{sub_category}}</a></li>
+            {% endfor %}
+        </ul>
+    {% endfor %}
+{% endblock %}

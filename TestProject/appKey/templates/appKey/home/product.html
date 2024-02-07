@@ -1,0 +1,13 @@
+{% extends 'appKey/base.html' %}
+
+{% block title %}{{title}}{% endblock %}
+
+{% block content %}
+    {% for value in cards %}
+        <div style="background-color: #5d2fb7;color:#ffff; border-radius: 10px;">
+            <h1>{{value.title}}</h1>
+            <p>{{value.price}} {{value.currency}}</p>
+            <a href="" style="color: #ffff">Перейти к товару</a>
+        </div>    
+    {% endfor %}
+{% endblock %}
