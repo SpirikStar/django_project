@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{csrf_token}}">
+    <title>Запрос</title>
+</head>
+<body>
+    <input id="len_password" type="number" placeholder="Введите длину пароля">
+    <input id="count_password" type="number" placeholder="Введите кол-во паролей">
+    <button class="send-btn">Сгенерировать пароль</button>
+    <div id="passwords"></div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="{% static 'appApi/js/point.js' %}"></script>
+</body>
+</html>

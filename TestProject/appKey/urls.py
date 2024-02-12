@@ -4,5 +4,5 @@ urlpatterns = [
     # path('', views.HomeKey.as_view(), name="urlHomeKey"),
     path('', views.CategorysPage.as_view(), name="urlCategorys"),
     path('category/<int:id>', views.ProductPage.as_view(), name="urlProduct"),
-    path('full-product/<int:id>/', views.FullProduct.as_view(), name="urlFullProduct"),
+    # path('full-product/<int:id>/', views.FullProduct.as_view(), name="urlFullProduct"),
 ]
