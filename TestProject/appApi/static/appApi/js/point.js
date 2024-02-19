@@ -13,7 +13,12 @@ $(document).ready(function () {
                 csrfmiddlewaretoken: csrftoken
             },
             success: function (response) {
-
+                for (let i = 0; i < response.data_email.length; i++){
+                    let section = document.querySelector("#emails")
+                    let p = document.createElement("p")
+                    p.textContent = response.data_email[i]
+                    section.appendChild(p)
+                }
             },
             error: function (response) { }
         })

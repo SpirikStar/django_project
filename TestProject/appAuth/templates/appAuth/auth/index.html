@@ -1,0 +1,14 @@
+{% extends 'appAuth/base.html' %}
+
+{% block title %}Авторизация{% endblock %}
+
+
+{% block form %}
+    <form method="post" id="FormAuth">
+        {% csrf_token %}
+        <input type="text" name="login" placeholder="Введите логин:" required>
+        <input type="password" name="password" placeholder="Введите пароль: " required>
+        <button>Авторизоваться</button>
+    </form>
+{% endblock %}
+
