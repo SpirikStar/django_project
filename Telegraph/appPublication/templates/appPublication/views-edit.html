@@ -1,0 +1,12 @@
+{% extends 'appPublication/base.html' %}
+
+
+{% block title %}Редактирование публикации{% endblock %}
+{% block content %}
+    <form action="" method="post" id="FormContent">
+        {% csrf_token %}
+        <textarea  id="EditContent" name="content">Начните вводить текст здесь...</textarea>
+        <button>Опубликовать</button>
+    </form>
+
+{% endblock %}
