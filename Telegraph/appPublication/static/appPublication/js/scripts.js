@@ -22,7 +22,25 @@ $(document).ready(function (){
                 csrfmiddlewaretoken: form.find('input[name="csrfmiddlewaretoken"]').val(),
                 content: form.find('textarea[name="content"]').val()
             },
-            success: function (response){},
+            success: function (response){
+                if (response.status == 'ok') {
+                    // let div = document.querySelector('.story-links')
+                    // let a = document.createElement('a')
+                    // a.textContent = `Перейдите по ссылке: ${response.url}`
+                    // a.href = response.url
+                    // div.appendChild(a)
+
+                    let div = $('.story-links')
+                    let content = $(`
+                    <p>
+                        <a href="${response.url}">Перейдите по ссылке: ${response.url}</a>
+                    </p>
+                    `)
+                    div.append(content)
+                } else{
+                    alert("Ссылка на публикацию не доступна, повторите позже")
+                }
+            },
             error: function (response){}
         })
     })
