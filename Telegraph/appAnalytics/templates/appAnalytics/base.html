@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="width: 500px;">
+        <canvas id="myBrowsers"></canvas>
+    </div>
+    <div style="width: 500px;">
+        <canvas id="myOS"></canvas>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        let browsers = {{browsers|safe}}
+        let os = {{os|safe}}
+        new Chart(document.getElementById('myBrowsers'), {
+            type: 'doughnut',
+            data: {
+                labels: Object.keys(browsers),
+                datasets: [{
+                    data: Object.values(browsers),
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+        new Chart(document.getElementById('myOS'), {
+            type: 'bar',
+            data: {
+                labels: Object.keys(os),
+                datasets: [{
+                    data: Object.values(os),
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>

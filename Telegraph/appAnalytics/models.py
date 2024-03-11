@@ -1,8 +1,8 @@
 from django.db import models
 from appPublication.models import PubNews
+import datetime
 
-
-class StaticLInk(models.Model):
+class StaticLink(models.Model):
     pub_news = models.ForeignKey(
         PubNews,
         on_delete=models.CASCADE,
@@ -53,6 +53,11 @@ class StaticLInk(models.Model):
         null=True,
         blank=True,
         max_length=150
+    )
+    date_time = models.DateTimeField(
+        verbose_name="Дата и время",
+        default=datetime.datetime.now,
+        null=False
     )
     def __str__(self):
         return self.pub_news.name_url

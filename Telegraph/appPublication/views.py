@@ -4,7 +4,7 @@ from django.views import View
 from .models import PubNews
 import uuid
 from user_agents import parse
-
+from appAnalytics.models import StaticLink
 
 class PublicationPage(View):
     def get(self, request):
@@ -30,6 +30,7 @@ class OpenPublicPage(View):
     def get(self, request, name):
         user_agent = request.META['HTTP_USER_AGENT']
         ua_parsed = parse(user_agent)
+        
         print(ua_parsed.os.family, ua_parsed.os.version_string)
         print(ua_parsed.browser)
         print(ua_parsed.device)
@@ -41,6 +42,16 @@ class OpenPublicPage(View):
         print(ua_parsed.is_email_client)
         try:
             obj_pub = PubNews.objects.get(name_url=name)
+            obj_pub.count += 1
+            obj_pub.save()
+            StaticLink.objects.create(
+                pub_news=obj_pub,
+                os=ua_parsed.os.family,
+                browser=ua_parsed.browser.family,
+                is_bot=ua_parsed.is_bot,
+                is_touch_capable=ua_parsed.is_touch_capable,
+                type_device='pc' if ua_parsed.is_pc else 'mobile' if ua_parsed.is_mobile else 'tablet'
+            )
             return render(
                 request, 'appPublication/result.html',
                 {

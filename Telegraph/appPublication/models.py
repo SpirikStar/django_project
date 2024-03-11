@@ -18,6 +18,11 @@ class PubNews(models.Model):
         max_length=10,
         null=False,
     )
+    count = models.IntegerField(
+        verbose_name="Просмотры",
+        default = 0,
+        null=False
+    )
     def __str__(self):
         return self.name_url
     class Meta:
