@@ -4,9 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'appKey/css/style.css' %}">
     <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
+    <section class="searh">
+        {% csrf_token %}
+        <input type="text" placeholder="Поиск по сайту" class="searh-input">
+        <ul>
+            <li>
+                <a href="">Что-то нашёл</a>
+            </li>
+        </ul>
+    </section>
     {% block content %}{% endblock %}
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="{% static 'appKey/js/script.js' %}"></script>
 </body>
 </html>
