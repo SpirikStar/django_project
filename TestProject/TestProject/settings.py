@@ -11,6 +11,7 @@ INSTALLED_APPS = [
     'appKey',
     'appApi',
     'appAuth',
+    'appShop',
     'appResponse',
     'django.contrib.admin',
     'django.contrib.auth',

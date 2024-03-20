@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{csrf_token}}">
+    <title>Document</title>
+</head>
+
+<body>
+    {% for product in products %}
+        {% if product.count != 0 %}
+            <div class="card">
+                <h1>{{product.title}}</h1>
+                <h3>{{product.price}}</h3>
+                <button id="addback" data-product-id="{{product.id}}">Добавить в корзину</button>
+            </div>
+        {% endif %}
+    {% endfor %}
+    <div class="back"></div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="{% static 'appShop/js/script.js' %}"></script>
+</body>
+
+</html>

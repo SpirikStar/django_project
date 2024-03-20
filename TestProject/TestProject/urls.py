@@ -9,6 +9,7 @@ urlpatterns = [
     path('api/', include('appApi.urls')),
     path('auth/', include('appAuth.urls')),
     path('data/', include('appResponse.urls')),
+    path('shop/', include('appShop.urls')),
     path('summernote/', include('django_summernote.urls')),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
