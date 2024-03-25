@@ -20,6 +20,17 @@
         {% endif %}
     {% endfor %}
     <div class="back"></div>
+    <form action="{% url 'urlMethodDjangoPost' %}" method="post">
+        {% csrf_token %}
+        <input name="janr" type="text" placeholder="Введите жанр">
+        <button>Отправить</button>
+    </form>
+    
+    <form action="{% url 'urlMethodAjaxPost' %}" method="post" id="FormAjax">
+        {% csrf_token %}
+        <textarea name="desc" cols="30" rows="10"></textarea>
+        <button>Отправить</button>
+    </form>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="{% static 'appShop/js/script.js' %}"></script>
 </body>
